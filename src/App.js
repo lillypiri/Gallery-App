@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 import Kittens from "./Kittens";
-
-
+import Puppies from "./Puppies";
+import Birbs from "./Birbs";
 // Use the flickr.photos.search endpoint/method
 
 class App extends Component {
@@ -13,10 +13,26 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Flickr</h1>
         </header>
-        <p className="App-intro">
-        </p>
+
         <BrowserRouter>
-          <Route path="/Kittens"  component={Kittens} />
+          <div>
+
+            <Route path="/kittens" component={Kittens} />
+            <Link to="/kittens">
+              Kittens | 
+            </Link>
+
+            <Route path="/puppies" component={Puppies} />
+            <Link to="/puppies">
+              Puppies |
+            </Link> 
+
+            <Route path="/birbs" component={Birbs} />
+            <Link to="/birbs">
+              Birbs
+            </Link>
+
+          </div>
         </BrowserRouter>
       </div>;
   }
