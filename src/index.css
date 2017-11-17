@@ -119,3 +119,7 @@ input {
     width: 100px;
   }
 }
+
+.loading {
+  display: block;
+}
