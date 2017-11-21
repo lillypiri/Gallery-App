@@ -5,8 +5,6 @@ import KeywordRoute from './KeywordRoute';
 import SearchBar from './SearchBar';
 import NotFound from './NotFound';
 
-/* A container component that takes in a keyword and api key as props,
- and fetches the photos and other required information from the API */
 export default class Container extends Component {
   constructor(props) {
     super(props);
