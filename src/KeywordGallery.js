@@ -39,6 +39,9 @@ class KeywordGallery extends Component {
   }
 
   render() {
+    if(!this.state.isLoading && this.state.images && this.state.images.length === 0) {
+      return (<div><h2>No results found</h2><p>That search did not return any results, please try again.</p></div>)
+    }
     return (
       <div>
         <h2>{this.props.keyword}</h2>
